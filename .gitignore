@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+tools/
+*.log
+
+# Runs: only publish the final network (engine .scn + Python .npz).
+runs/*
+!runs/main/
+runs/main/*
+!runs/main/best.scn
+!runs/main/best.npz
+
+# Native: publish the source and the ready-built engine, not debug/baseline builds.
+native/*
+!native/engine.cpp
+!native/scratchchess.exe
+
+# fastchess writes its match config here.
+/config.json

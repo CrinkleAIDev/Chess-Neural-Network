@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scratch-chess"
+version = "0.1.0"
+description = "A chess evaluator trained from random weights, with its own search"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "torch>=2.6", "python-chess==1.999", "requests>=2.32,<3", "zstandard>=0.23,<1", "threadpoolctl>=3.5,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+reel = ["matplotlib>=3.8,<4"]
+
+[tool.setuptools.packages.find]
+include = ["scratch_chess*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
