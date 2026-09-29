@@ -124,6 +124,10 @@ the canonical position, so duplicates and colour mirrors never straddle the spli
 There is no global dedup (duplicates are ~0.5%). `data/lichess-100m` and older
 datasets use the previous 152-byte format, which is still readable.
 
+## License
+
+MIT, see [LICENSE](LICENSE). This covers the code and the trained network.
+
 ## Tests
 
 ```powershell
